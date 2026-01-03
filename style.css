@@ -1,12 +1,20 @@
 :root {
-  --bg-main: #f2f4f7;        /* soft grey background */
-  --bg-card: #ffffff;       /* clean card surface */
-  --bg-header: #e8ebef;     /* slightly darker grey */
-  --accent: #5b7c99;        /* muted blue-grey */
-  --accent-soft: #9fb3c8;
-  --text-main: #2f3a45;     /* dark grey text */
-  --text-muted: #6b7280;
-  --border: #d1d5db;        /* light grey border */
+  --bg-main: #eaf1fc;
+  /* very light blue background */
+  --bg-card: #ffffff;
+  /* white card background */
+  --accent: #4a90e2;
+  /* medium blue primary accent */
+  --accent-soft: #8ab6f3;
+  /* light blue soft accent */
+  --accent-warm: #cce0ff;
+  /* pale sky blue warm accent */
+  --text-main: #1a1f3d;
+  /* dark navy text */
+  --text-muted: #5a637d;
+  /* greyish blue muted text */
+  --border: #d1d9eb;
+  /* light bluish border */
 }
 
 * {
@@ -17,119 +25,151 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: var(--bg-main);
+  background: linear-gradient(135deg, #eaf1fc 0%, #d6e5fb 50%, #cce0ff 100%);
+  /* full radiant light blue */
   color: var(--text-main);
-  line-height: 1.7;
+  line-height: 1.9;
+  font-size: 18px;
+  transition: background 0.5s ease;
 }
 
-/* ================= HEADER ================= */
-
 header {
-  padding: 3.5rem 1.5rem 2.5rem;
+  padding: 5rem 1.5rem 4rem;
   text-align: center;
-  background: var(--bg-header);
+  background: var(--bg-main);
   border-bottom: 1px solid var(--border);
 }
 
-.logo {
-  font-size: 2.7rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: var(--accent);
+/* ================= HEADER TITLE ================= */
+header h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+
+  /* Gradient base */
+  background: linear-gradient(45deg, var(--accent) 0%, var(--accent-soft) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), 1px 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+header h1:hover {
+  transform: scale(1.05);
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+header .title-game {
+  display: inline;
+  background: linear-gradient(45deg, #4a90e2 0%, #8ab6f3 60%);
+  /* medium → light blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header .title-hub {
+  display: inline;
+  background: linear-gradient(45deg, #8ab6f3 0%, #cce0ff 100%);
+  /* light → pale blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header p {
-  margin-top: 0.8rem;
-  font-size: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
   color: var(--text-muted);
 }
 
-/* ================= MAIN LAYOUT ================= */
-
 main {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
-  padding: 2.5rem 1.5rem;
+  padding: 3.5rem 1.5rem;
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
 }
-
-/* ================= SECTIONS ================= */
 
 section {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.8rem 2rem;
+  border-radius: 16px;
+  padding: 2.5rem 2.5rem;
 }
 
-/* ================= HEADINGS ================= */
-
 h2 {
-  font-size: 1.45rem;
-  margin-bottom: 0.8rem;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
   color: var(--accent);
 }
 
 h3 {
-  font-size: 1.15rem;
-  margin-bottom: 0.3rem;
-  color: var(--accent);
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: var(--accent-soft);
 }
-
-h4 {
-  font-size: 1.15rem;
-  margin-bottom: 0.3rem;
-  color: var(--border);
-}
-
-/* ================= TREE DIAGRAM ================= */
 
 .tree-diagram {
-  margin-top: 1.8rem;
+  margin-top: 2.5rem;
   text-align: center;
 }
 
 .tree-parent {
-  margin-bottom: 1.8rem;
+  margin-bottom: 2.5rem;
 }
 
 .tree-children {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
   position: relative;
 }
 
 .tree-children::before {
   content: "";
   position: absolute;
-  top: -16px;
+  top: -22px;
   left: 50%;
-  width: 60%;
-  height: 1px;
-  background: var(--accent-soft);
+  width: 70%;
+  height: 2px;
+  background: var(--accent);
   transform: translateX(-50%);
 }
 
-/* ================= CARDS ================= */
-
 .node-card {
-  background: #f9fafb;
+  background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 1.2rem 1.4rem;
+  border-radius: 14px;
+  padding: 1.6rem 1.8rem;
 }
 
+/* ================= GAMEHUB PARENT NODE ================= */
 .parent {
-  background: var(--accent);
-  color: #ffffff;
   display: inline-block;
-  padding: 1.4rem 1.8rem;
-  border-radius: 10px;
+  padding: 1.8rem 2.2rem;
+
+  background: radial-gradient(circle at top left, var(--accent) 0%, var(--accent-soft) 50%, var(--accent-warm) 100%);
+
+  border: 2px solid var(--accent);
+  color: var(--text-main);
+  /* dark navy text for contrast */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* ================= CONNECTORS ================= */
+.parent:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.parent h3 {
+  color: var(--text-main);
+  /* ensure title stands out */
+}
 
 .child {
   position: relative;
@@ -138,63 +178,53 @@ h4 {
 .child::before {
   content: "";
   position: absolute;
-  top: -16px;
+  top: -22px;
   left: 50%;
-  width: 1px;
-  height: 16px;
-  background: var(--accent-soft);
+  width: 2px;
+  height: 22px;
+  background: var(--accent);
   transform: translateX(-50%);
 }
 
-/* ================= LISTS ================= */
-
 ul {
-  margin-left: 1.2rem;
-  margin-top: 0.4rem;
+  margin-left: 1.5rem;
+  margin-top: 0.6rem;
 }
 
 li {
-  margin-bottom: 0.3rem;
-  color: var(--text-muted);
+  margin-bottom: 0.45rem;
 }
-
-/* ================= IMAGES ================= */
 
 .screenshots {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .screenshots img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 14px;
   border: 1px solid var(--border);
 }
 
-/* ================= FOOTER ================= */
-
 footer {
-  margin-top: 3rem;
-  padding: 1.8rem 1rem;
+  margin-top: 4.5rem;
+  padding: 2.5rem 1rem;
   text-align: center;
-  font-size: 0.95rem;
   color: var(--text-muted);
   border-top: 1px solid var(--border);
-  background: var(--bg-header);
+  background: var(--bg-main);
 }
 
 footer span {
   color: var(--accent);
-  font-weight: 500;
+  font-weight: 600;
 }
 
-/* ================= MOBILE ================= */
-
 @media (max-width: 600px) {
-  .logo {
-    font-size: 2.2rem;
+  header h1 {
+    font-size: 4.5rem;
   }
 
   .tree-children::before {

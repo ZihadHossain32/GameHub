@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,132 +12,134 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
-<header>
-  <h1>
-    <span class="title-game">Game</span>
-    <span class="title-hub">Hub</span>
-  </h1>
-  <p>Object-Oriented Programming Project • C++</p>
-</header>
+  <header>
+    <h1>
+      <span class="title-game">Game</span>
+      <span class="title-hub">Hub</span>
+    </h1>
+    <p>Object-Oriented Programming Project • C++</p>
+  </header>
 
-<main>
+  <main>
 
-  <section>
-    <h2>📘 Course Information</h2>
-    <p><strong>Course:</strong> Object-Oriented Programming (C++)</p>
-    <p><strong>Submission Date:</strong> September 09, 2025</p>
-  </section>
+    <section>
+      <h2>📘 Course Information</h2>
+      <p><strong>Course:</strong> Object-Oriented Programming (C++)</p>
+      <p><strong>Submission Date:</strong> September 09, 2025</p>
+    </section>
 
-  <section>
-    <h2>🧠 OOP Concepts Demonstrated</h2>
-    <ul>
-      <li>Encapsulation</li>
-      <li>Inheritance</li>
-      <li>Polymorphism</li>
-      <li>Abstraction</li>
-      <li>Diamond Problem (Virtual Inheritance)</li>
-      <li>Error Handling</li>
-    </ul>
-  </section>
+    <section>
+      <h2>🧠 OOP Concepts Demonstrated</h2>
+      <ul>
+        <li>Encapsulation</li>
+        <li>Inheritance</li>
+        <li>Polymorphism</li>
+        <li>Abstraction</li>
+        <li>Diamond Problem (Virtual Inheritance)</li>
+        <li>Error Handling</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>🌳 Project Structure (GameHub Tree)</h2>
-    <p>
-      <strong>GameHub</strong> acts as the parent controller that manages multiple
-      mini-games. The hierarchy below visually represents the parent–child
-      relationship in a tree-like form.
-    </p>
+    <section>
+      <h2>🌳 Project Structure (GameHub Tree)</h2>
+      <p>
+        <strong>GameHub</strong> acts as the parent controller that manages multiple
+        mini-games. The hierarchy below visually represents the parent–child
+        relationship in a tree-like form.
+      </p>
 
-    <div class="tree-diagram">
-      <div class="tree-parent">
-        <div class="node-card parent">
-          <h3>🎮 GameHub (Parent)</h3>
-          <p>Main controller: menu system, players, game routing.</p>
+      <div class="tree-diagram">
+        <div class="tree-parent">
+          <div class="node-card parent">
+            <h3>🎮 GameHub</h3>
+            <p>Main controller: menu system, players, game routing.</p>
+          </div>
+        </div>
+
+        <div class="tree-children">
+          <div class="node-card child">
+            <h3>✊✋✌ Rock Paper Scissors</h3>
+            <ul>
+              <li>Player vs Computer</li>
+              <li>Randomized rounds</li>
+              <li>Win / Loss / Draw tracking</li>
+            </ul>
+          </div>
+
+          <div class="node-card child">
+            <h3>❌⭕ Tic Tac Toe</h3>
+            <ul>
+              <li>Two-player game</li>
+              <li>3×3 board logic</li>
+              <li>Win & draw detection</li>
+            </ul>
+          </div>
+
+          <div class="node-card child">
+            <h3>🔢 Hidden Number Guessing</h3>
+            <ul>
+              <li>Secret number generation</li>
+              <li>Limited attempts</li>
+              <li>Point-based scoring</li>
+            </ul>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="tree-children">
-        <div class="node-card child">
-          <h3>✊✋✌ Rock Paper Scissors</h3>
-          <ul>
-            <li>Player vs Computer</li>
-            <li>Randomized rounds</li>
-            <li>Win / Loss / Draw tracking</li>
-          </ul>
-        </div>
+    <section>
+      <h2>🖼️ Program Output</h2>
 
-        <div class="node-card child">
-          <h3>❌⭕ Tic Tac Toe</h3>
-          <ul>
-            <li>Two-player game</li>
-            <li>3×3 board logic</li>
-            <li>Win & draw detection</li>
-          </ul>
-        </div>
-
-        <div class="node-card child">
-          <h3>🔢 Hidden Number Guessing</h3>
-          <ul>
-            <li>Secret number generation</li>
-            <li>Limited attempts</li>
-            <li>Point-based scoring</li>
-          </ul>
-        </div>
+      <h3>Home Screen </h3>
+      <div class="screenshots">
+        <img src="./images/homescreen.png" alt="Tic Tac Toe Output 1">
       </div>
-    </div>
-  </section>
 
- <section>
-  <h2>🖼️ Program Output</h2>
-  
-  <h3>Home Screen </h3>
-  <div class="screenshots">
-    <img src="./images/homescreen.png" alt="Tic Tac Toe Output 1">
-  </div>
+      <h3>Details</h3>
+      <div class="screenshots">
+        <img src="./images/details.png" alt="Tic Tac Toe Output 1">
+      </div>
 
-  <h3>Details</h3>
-  <div class="screenshots">
-    <img src="./images/details.png" alt="Tic Tac Toe Output 1">
-  </div>
-  
-   <!-- Rock Paper Scissors -->
-  <h3>✊✋✌ Rock Paper Scissors</h3>
-  <div class="screenshots">
-    <img src="./images/rockpaper.png" alt="Rock Paper Scissors Output 1">
-    
-  </div>
+      <!-- Rock Paper Scissors -->
+      <h3>✊✋✌ Rock Paper Scissors</h3>
+      <div class="screenshots">
+        <img src="./images/rockpaper.png" alt="Rock Paper Scissors Output 1">
 
-   <!-- Tic Tac Toe -->
+      </div>
 
-  <h3>❌⭕ Tic Tac Toe</h3>
-  <div class="screenshots">
-    <img src="./images/tictac.png" alt="Tic Tac Toe Output 1">
-  </div>
+      <!-- Tic Tac Toe -->
 
-  <!-- Hidden Number Guessing -->
-  <h3>🔢 Hidden Number Guessing</h3>
-  <div class="screenshots">
-    <img src="./images/hidden.png" alt="Hidden Number Guessing Output">
-  </div>
-</section>
+      <h3>❌⭕ Tic Tac Toe</h3>
+      <div class="screenshots">
+        <img src="./images/tictac.png" alt="Tic Tac Toe Output 1">
+      </div>
 
-  <section>
-    <h2>📝 Discussion</h2>
-    <p>
-      This tree-based structure highlights how <strong>GameHub</strong> acts as
-      the root system while individual games grow as independent yet connected
-      branches. The design ensures scalability, modularity, and clean
-      object-oriented architecture.
-    </p>
-  </section>
+      <!-- Hidden Number Guessing -->
+      <h3>🔢 Hidden Number Guessing</h3>
+      <div class="screenshots">
+        <img src="./images/hidden.png" alt="Hidden Number Guessing Output">
+      </div>
+    </section>
 
-</main>
+    <section>
+      <h2>📝 Discussion</h2>
+      <p>
+        This tree-based structure highlights how <strong>GameHub</strong> acts as
+        the root system while individual games grow as independent yet connected
+        branches. The design ensures scalability, modularity, and clean
+        object-oriented architecture.
+      </p>
+    </section>
 
-<footer>
-  <p>© 2025 <span>GameHub</span> • Built with C++ & OOP Principles</p>
-</footer>
+  </main>
+
+  <footer>
+    <p>© 2025 <span>GameHub</span> • Built with C++ & OOP Principles</p>
+  </footer>
 
 </body>
+
 </html>
