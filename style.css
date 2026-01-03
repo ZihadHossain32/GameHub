@@ -1,0 +1,203 @@
+:root {
+  --bg-main: #f2f4f7;        /* soft grey background */
+  --bg-card: #ffffff;       /* clean card surface */
+  --bg-header: #e8ebef;     /* slightly darker grey */
+  --accent: #5b7c99;        /* muted blue-grey */
+  --accent-soft: #9fb3c8;
+  --text-main: #2f3a45;     /* dark grey text */
+  --text-muted: #6b7280;
+  --border: #d1d5db;        /* light grey border */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+/* ================= HEADER ================= */
+
+header {
+  padding: 3.5rem 1.5rem 2.5rem;
+  text-align: center;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-size: 2.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+}
+
+header p {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* ================= MAIN LAYOUT ================= */
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2.5rem 1.5rem;
+  display: grid;
+  gap: 2rem;
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+}
+
+/* ================= HEADINGS ================= */
+
+h2 {
+  font-size: 1.45rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+  color: var(--accent);
+}
+
+h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+  color: var(--border);
+}
+
+/* ================= TREE DIAGRAM ================= */
+
+.tree-diagram {
+  margin-top: 1.8rem;
+  text-align: center;
+}
+
+.tree-parent {
+  margin-bottom: 1.8rem;
+}
+
+.tree-children {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  position: relative;
+}
+
+.tree-children::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  width: 60%;
+  height: 1px;
+  background: var(--accent-soft);
+  transform: translateX(-50%);
+}
+
+/* ================= CARDS ================= */
+
+.node-card {
+  background: #f9fafb;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+}
+
+.parent {
+  background: var(--accent);
+  color: #ffffff;
+  display: inline-block;
+  padding: 1.4rem 1.8rem;
+  border-radius: 10px;
+}
+
+/* ================= CONNECTORS ================= */
+
+.child {
+  position: relative;
+}
+
+.child::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  width: 1px;
+  height: 16px;
+  background: var(--accent-soft);
+  transform: translateX(-50%);
+}
+
+/* ================= LISTS ================= */
+
+ul {
+  margin-left: 1.2rem;
+  margin-top: 0.4rem;
+}
+
+li {
+  margin-bottom: 0.3rem;
+  color: var(--text-muted);
+}
+
+/* ================= IMAGES ================= */
+
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.screenshots img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  margin-top: 3rem;
+  padding: 1.8rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  background: var(--bg-header);
+}
+
+footer span {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .logo {
+    font-size: 2.2rem;
+  }
+
+  .tree-children::before {
+    display: none;
+  }
+}
